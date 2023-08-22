@@ -1,104 +1,79 @@
-import random 
-# Exercise 1 : What Are You Learning ? 
-    # Instructions 
-    # Write a function called display_message() that prints one sentence telling everyone what you are learning in this course. 
-    # Call the function, and make sure the message displays correctly. 
- 
-def display_message(): 
-    print("I'm learniing python functions.") 
- 
-display_message() 
+# Exercise 1 : Hello World 
+    # Print the following output in one line of code: 
+print("Hello World\n"*4) 
  
  
-# Exercise 2: What’s Your Favorite Book ? 
-    # Instructions 
-    # Write a function called favorite_book() that accepts one parameter called title. 
-    # The function should print a message, such as "One of my favorite books is <title>". 
-    # For example: “One of my favorite books is Alice in Wonderland” 
-    # Call the function, make sure to include a book title as an argument when calling the function. 
- 
-def favorite_book(title="Necronomicon"): 
-    print(F"One of my favorite books is {title}") 
- 
-favorite_book("The fellowship of the ring") 
+# Exercise 2 : Some Math 
+    # Write code that calculates the result of: (99^3)*8  
+    # (meaning 99 to the power of 3, times 8). 
+print((99**3)*8) 
  
  
- 
-# Exercise 3 : Some Geography 
-    # Instructions 
-    # Write a function called describe_city() that accepts the name of a city and its country  
-    # as parameters. 
-    # The function should print a simple sentence, such as "<city> is in <country>". 
-    # For example “Reykjavik is in Iceland” 
-    # Give the country parameter a default value. 
-    # Call your function. 
- 
-def describe_city(city,country="Israel"): 
-    print(F"{city} is in {country}") 
- 
-describe_city("Tel-Aviv") 
+# Exercise 3 : What Is The Output ? 
+    # Predict the output of the following code snippets: 
+    # >>> 5 < 3                 False 
+    # >>> 3 == 3                True  
+    # >>> 3 == "3"              False 
+    # >>> "3" > 3               False 
+    # >>> "Hello" == "hello"    False 
  
  
-# Exercise 4 : Random 
-    # Instructions 
-    # Create a function that accepts a number between 1 and 100 and generates  
-    # another number randomly between 1 and 100. 
-    # Compare the two numbers, if it’s the same number, display a success message,  
-    # otherwise show a fail message and display both numbers. 
- 
-def guess_1_100(user_num): 
-    num=random.randrange(1,100) 
-    if num == int(user_num): 
-        print("YAY! You've guessed") 
-    else: print(F"Sorry, your number is {user_num} and mine is {num}") 
- 
-guess_1_100(78) 
+#  Exercise 4 : Your Computer Brand 
+    # Create a variable called computer_brand which value is  
+    # the brand name of your computer. 
+    # Using the computer_brand variable print a sentence  
+    # that states the following: "I have a <computer_brand> computer". 
+computer_brand = "Apple" 
+print(F"I have an {computer_brand} computer ") 
  
  
+#  Exercise 5 : Your Information 
+    # Create a variable called name, and set it’s value to your name. 
+    # Create a variable called age, and set it’s value to your age. 
+    # Create a variable called shoe_size, and set it’s value to your shoe size. 
+    # Create a variable called info and set it’s value to an interesting sentence about yourself.  
+    # The sentence must contain all the variables created in parts 1, 2 and 3. 
+    # Have your code print the info message. 
+    # Run your code 
+name,age,shoe_size = "George",31,43 
+info = F"Hi! My name is {name}, I'm {age} years old. I wear shoes size {shoe_size}." 
+print(info) 
  
  
-# Exercise 5 : Let’s Create Some Personalized Shirts ! 
-    # Instructions 
-    # Write a function called make_shirt() that accepts a size and the text of a message  
-    # that should be printed on the shirt. 
-    # The function should print a sentence summarizing the size of the shirt 
-    # and the message printed on it, such as "The size of the shirt is <size> and the text is <text>" 
-    # Call the function make_shirt(). 
- 
-    # Modify the make_shirt() function so that shirts are large by default with a message  
-    # that reads “I love Python” by default. 
-    # Make a large shirt with the default message 
-    # Make medium shirt with the default message 
-    # Make a shirt of any size with a different message. 
- 
-    # Bonus: Call the function make_shirt() using keyword arguments. 
- 
-def make_shirt(size="Large", text="I love Python!"): 
-    print(F"The size of the shirt is '{size}' and the text is '{text}'") 
- 
-make_shirt() 
-make_shirt(size="Medium") 
-make_shirt(text="This is a T-shirt") 
+#  Exercise 6 : A & B 
+    # Create two variables, a and b. 
+    # Each variable value should be a number. 
+    # If a is bigger then b, have your code print Hello World. 
+a=int(input("Enter number A: ")) 
+b=int(input("Enter number B: ")) 
+if a>b: 
+    print("Hello world!") 
  
  
-# Exercise 6 : Magicians … 
-    # Instructions 
-    # Using this list of magician’s names.  
-magician_names = ['Harry Houdini', 'David Blaine', 'Criss Angel'] 
-    # Pass the list to a function called show_magicians(), which prints the name of  
-    # each magician in the list. 
-    # Write a function called make_great() that modifies the list of magicians  
-    # by adding the phrase "the Great" to each magician’s name. 
-    # Call the function make_great(). 
-    # Call the function show_magicians() to see that the list has actually been modified. 
+# Exercise 7 : Odd Or Even 
+    # Write code that asks the user for a number and determines whether this number is odd or even. 
+input_number = int(input("Please enter a number: ")) 
+if input_number % 2 == 0: 
+    print("Your number is even") 
+else : print("Your number is odd") 
  
-def show_magicians(array): 
-    for name in array: 
-        print(name) 
  
-def make_great(array): 
-    for i in range(len(array)): 
-        array[i] += " the Great!" 
  
-make_great(magician_names) 
-show_magicians(magician_names)
+# Exercise 8 : What’s Your Name ? 
+    # Write code that asks the user for their name and determines whether or not  
+    # you have the same name, print out a funny message based on the outcome. 
+users_name = input("What's your name?").lower() 
+if users_name == "george": 
+    print("Wow! We have the same names!") 
+ 
+ 
+ 
+# Exercise 9 : Tall Enough To Ride A Roller Coaster 
+    # Write code that will ask the user for their height in inches. 
+    # If they are over 145cm print a message that states they are tall enough to ride. 
+    # If they are not tall enough print a message that says they need to grow some more to ride. 
+users_height_inches = int(input("How high are you in inches?")) 
+users_height_cm = users_height_inches*2.54 
+if users_height_cm > 145: 
+    print(F"You're {users_height_cm}cm. That's tall enough to ride!") 
+else: print(F"Sorry, you're only {users_height_cm}. You need to grow up!")
